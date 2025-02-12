@@ -1,0 +1,29 @@
+{
+  "name": "@sunui/button",
+  "version": "0.0.1",
+  "author": "Sun",
+  "description": "",
+  "main": "./dist/sunui-button.umd.js",
+  "module": "./dist/sunui-button.mjs",
+  "types": "",
+  "exports": {
+    ".": {
+      "types": "./dist/sunui-button.d.ts",
+      "import": "./dist/sunui-button.mjs",
+      "require": "./dist/sunui-button.umd.js"
+    }
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "files": [
+    "dist",
+    "REDME.md"
+  ],
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "dependencies": {
+    "@sunui/shared": "workspace:^"
+  }
+}

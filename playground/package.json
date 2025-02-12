@@ -1,0 +1,15 @@
+{
+  "name": "@sunui/playground",
+  "version": "0.0.1",
+  "author": "Sun",
+  "description": "",
+  "scripts": {
+    "dev": "vite"
+  },
+  "peerDependencies": {
+    "vue": ">3.0.0"
+  },
+  "dependencies": {
+    "@sunui/ui": "workspace:^"
+  }
+}

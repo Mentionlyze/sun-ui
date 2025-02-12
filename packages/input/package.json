@@ -1,0 +1,29 @@
+{
+  "name": "@sunui/input",
+  "version": "0.0.1",
+  "author": "Sun",
+  "description": "",
+  "main": "./dist/sunui-input.umd.js",
+  "module": "./dist/sunui-input.mjs",
+  "types": "",
+  "exports": {
+    ".": {
+      "types": "./dist/sunui-input.d.ts",
+      "import": "./dist/sunui-input.mjs",
+      "require": "./dist/sunui-input.umd.js"
+    }
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "files": [
+    "dist",
+    "REDME.md"
+  ],
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "dependencies": {
+    "@sunui/shared": "workspace:^"
+  }
+}

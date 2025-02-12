@@ -1,0 +1,28 @@
+{
+  "name": "@sunui/shared",
+  "version": "0.0.1",
+  "author": "Sun",
+  "description": "",
+  "files": [
+    "dist",
+    "REDME.md"
+  ],
+  "main": "./dist/sunui-shared.umd.js",
+  "module": "./dist/sunui-shared.mjs",
+  "exports": {
+    ".": {
+      "types": "./dist/sunui-shared.d.ts",
+      "import": "./dist/sunui-shared.mjs",
+      "require": "./dist/sunui-shared.umd.js"
+    }
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.15"
+  }
+}
