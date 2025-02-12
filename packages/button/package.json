@@ -5,10 +5,10 @@
   "description": "",
   "main": "./dist/sunui-button.umd.js",
   "module": "./dist/sunui-button.mjs",
-  "types": "",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/sunui-button.d.ts",
+      "types": "./dist/index.d.ts",
       "import": "./dist/sunui-button.mjs",
       "require": "./dist/sunui-button.umd.js"
     }

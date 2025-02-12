@@ -9,9 +9,10 @@
   ],
   "main": "./dist/sunui.umd.js",
   "module": "./dist/sunui.mjs",
+  "types": "index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/sunui.d.ts",
+      "types": "./dist/index.d.ts",
       "import": "./dist/sunui.mjs",
       "require": "./dist/sunui.umd.js"
     }

@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { hello } from '@sunui/shared'
 
+defineOptions({
+  name: 'Button',
+})
+
 const props = withDefaults(
   defineProps<{
     text?: string

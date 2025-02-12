@@ -4,8 +4,8 @@ withDefaults(defineProps<{ modelValue?: string }>(), {
 })
 
 const emit = defineEmits(['update:modelValue'])
-const inputHandler = (e) => {
-  emit('update:modelValue', e.target.value)
+const inputHandler = (e: Event) => {
+  emit('update:modelValue', (<HTMLTextAreaElement>e.target)!.value)
 }
 </script>
 <template>
