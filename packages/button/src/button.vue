@@ -11,16 +11,26 @@ const props = withDefaults(
   }>(),
   {
     text: 'World',
-  }
+  },
 )
 
-const clickHandler = () => {
+function clickHandler() {
   hello(props.text)
 }
 </script>
 
 <template>
-  <button @click="clickHandler"><slot /></button>
+  <button @click="clickHandler">
+    <slot />
+  </button>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.test-class {
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+</style>

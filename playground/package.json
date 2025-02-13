@@ -1,8 +1,8 @@
 {
   "name": "@sunui/playground",
   "version": "0.0.1",
-  "author": "Sun",
   "description": "",
+  "author": "Sun",
   "scripts": {
     "dev": "vite"
   },

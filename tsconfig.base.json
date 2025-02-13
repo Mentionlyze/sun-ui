@@ -1,24 +1,24 @@
 {
   "compilerOptions": {
-    "rootDir": ".",
-    "baseUrl": ".",
-    "outDir": "dist",
     "target": "es2022",
+    "lib": [],
+    "baseUrl": ".",
+    "rootDir": ".",
     "module": "ESNext",
     "moduleResolution": "node",
-    "sourceMap": false,
-    "removeComments": false,
+    "paths": {
+      "@sunui/*": ["./packages/*/src"]
+    },
+    "resolveJsonModule": true,
+    "types": [],
     "strict": true,
     "noUnusedLocals": true,
-    "resolveJsonModule": true,
+    "outDir": "dist",
+    "removeComments": false,
+    "sourceMap": false,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "isolatedModules": true,
-    "skipLibCheck": true,
-    "lib": [],
-    "types": [],
-    "paths": {
-      "@sunui/*": ["./packages/*/src"]
-    }
+    "skipLibCheck": true
   }
 }

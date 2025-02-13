@@ -1,5 +1,6 @@
+import { cp, readdir } from 'node:fs/promises'
 import { join } from 'node:path'
-import { readdir, cp, rmdir } from 'node:fs/promises'
+import process from 'node:process'
 
 const fromRoot = (...paths: string[]) => join(__dirname, '..', ...paths)
 
@@ -19,7 +20,7 @@ async function main() {
 
 async function match() {
   const res = await readdir(PKGS_DTS_DIR, { withFileTypes: true })
-  return res.filter((dirent) => dirent.isDirectory()).map((dirent) => dirent.name)
+  return res.filter(dirent => dirent.isDirectory()).map(dirent => dirent.name)
 }
 
 async function resolve(pkgName: string) {
@@ -35,8 +36,9 @@ async function resolve(pkgName: string) {
     })
     await Promise.all(cpTasks)
     console.log(`[${pkgName}]: moved successfully`)
-  } catch (error) {
-    console.log(`[${pkgName}]: failed to move`)
+  }
+  catch (e: any) {
+    console.log(`[${pkgName}]: failed to move, error: ${e}`)
   }
 }
 

@@ -4,12 +4,13 @@ withDefaults(defineProps<{ modelValue?: string }>(), {
 })
 
 const emit = defineEmits(['update:modelValue'])
-const inputHandler = (e: Event) => {
-  emit('update:modelValue', (<HTMLTextAreaElement>e.target)!.value)
+function inputHandler(e: Event) {
+  emit('update:modelValue', (e.target as HTMLTextAreaElement).value)
 }
 </script>
+
 <template>
-  <input :value="modelValue" @input="inputHandler" />
+  <input :value="modelValue" @input="inputHandler">
 </template>
 
 <style scoped></style>

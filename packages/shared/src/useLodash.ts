@@ -1,4 +1,5 @@
 import lodash from 'lodash'
-export const useLodash = () => {
+
+export function useLodash() {
   return lodash
 }

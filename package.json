@@ -9,17 +9,9 @@
     "type:node": "tsc -p tsconfig.node.json --noEmit --composite false",
     "type:src": "pnpm run clean:type && vue-tsc -p tsconfig.src.json --composite false --declaration --emitDeclarationOnly",
     "mv-type": "tsx ./scripts/mv-type.ts",
-    "build:ui": "pnpm run type:src &&  pnpm --filter ./packages/** run build && pnpm run mv-type"
-  },
-  "devDependencies": {
-    "@types/lodash": "^4.17.15",
-    "@types/node": "^22.13.1",
-    "@vitejs/plugin-vue": "^5.2.1",
-    "rimraf": "^6.0.1",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.3",
-    "vite": "^6.1.0",
-    "vue-tsc": "^2.2.0"
+    "build:ui": "pnpm run type:src &&  pnpm --filter ./packages/** run build && pnpm run mv-type",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@sunui/button": "workspace:^",
@@ -28,5 +20,21 @@
     "@sunui/ui": "workspace:^",
     "lodash": "^4.17.21",
     "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.2.0",
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
+    "@types/lodash": "^4.17.15",
+    "@types/node": "^22.13.1",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "eslint": "^9.20.1",
+    "eslint-plugin-format": "^1.0.1",
+    "husky": "^9.1.7",
+    "rimraf": "^6.0.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0",
+    "vue-tsc": "^2.2.0"
   }
 }

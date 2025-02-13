@@ -1,10 +1,10 @@
-import { DefineComponent, App } from 'vue'
+import type { App, DefineComponent } from 'vue'
 
-type SFCInstall<T = any> = DefineComponent<{}, {}, T> & {
+export type SFCInstall = DefineComponent<{}, {}, any> & {
   install: (app: App) => void
 }
 
-export const withSFCInstall = (comp: DefineComponent<{}, {}, any>): SFCInstall => {
+export function withSFCInstall(comp: DefineComponent<{}, {}, any>): SFCInstall {
   comp.install = (app: any) => {
     app.component(comp.name, comp)
   }

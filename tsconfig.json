@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
     "target": "es2022",
+    "useDefineForClassFields": true,
     "moduleResolution": "node",
-    "isolatedModules": true,
-    "useDefineForClassFields": true
+    "isolatedModules": true
   },
-  "files": [],
   "references": [
     {
       "path": "./tsconfig.src.json"
@@ -13,5 +12,6 @@
     {
       "path": "./tsconfig.node.json"
     }
-  ]
+  ],
+  "files": []
 }

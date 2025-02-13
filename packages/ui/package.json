@@ -1,15 +1,8 @@
 {
   "name": "@sunui/ui",
   "version": "0.0.1",
-  "author": "Sun",
   "description": "",
-  "files": [
-    "dist",
-    "REDME.md"
-  ],
-  "main": "./dist/sunui.umd.js",
-  "module": "./dist/sunui.mjs",
-  "types": "index.d.ts",
+  "author": "Sun",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -17,6 +10,13 @@
       "require": "./dist/sunui.umd.js"
     }
   },
+  "main": "./dist/sunui.umd.js",
+  "module": "./dist/sunui.mjs",
+  "types": "index.d.ts",
+  "files": [
+    "REDME.md",
+    "dist"
+  ],
   "scripts": {
     "build": "vite build"
   },

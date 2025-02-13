@@ -1,3 +1,3 @@
-export const hello = (txt: string) => {
-  alert(`Hello ${txt}`)
+export function hello(txt: string) {
+  console.log(`Hello ${txt}`)
 }
