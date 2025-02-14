@@ -5,7 +5,7 @@ export async function readJsonFile<T extends Record<string, any> = Record<string
   return JSON.parse(content) as T
 }
 
-export async function writeJsonFile(filePath: string, data: Parameters<typeof JSON.stringify>): Promise<void> {
+export async function writeJsonFile(filePath: string, ...data: Parameters<typeof JSON.stringify>): Promise<void> {
   const content = JSON.stringify(data, null, 2)
   await writeFile(filePath, content, 'utf-8')
 }

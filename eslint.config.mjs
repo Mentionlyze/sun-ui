@@ -5,6 +5,7 @@ export default antfu({
   vue: {
     overrides: {
       'vue/no-reserved-component-names': 'off',
+      'vue/no-arrow-functions-in-watch': 'off',
     },
   },
   typescript: {
@@ -17,5 +18,7 @@ export default antfu({
     'no-alert': 'off',
     'no-console': 'off',
     'ts/no-unsafe-function-type': 'off',
+    'ts/no-dynamic-delete': 'off',
+    'node/no-callback-literal': 'off',
   },
 })

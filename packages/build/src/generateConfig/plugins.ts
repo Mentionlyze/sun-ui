@@ -10,6 +10,8 @@ import vue from '@vitejs/plugin-vue'
 import visualizer from 'rollup-plugin-visualizer'
 import inspect from 'vite-plugin-inspect'
 import { isObjectLike } from '../utils'
+import { pluginMoveDts } from './pluginMoveDts'
+import { pluginSetPackageJson } from './pluginSetPackageJson'
 
 export interface GenerateConfigPluginsOptions {
   pluginVue?: boolean | VueOptions
@@ -54,6 +56,12 @@ export function getPlugins(pacakgeJson: PackageJson = {}, options: GenerateConfi
   const result = getPresetPlugins(options)
 
   if (mode === 'pacakge') {
-    result.push()
+    result.push(pluginSetPackageJson(pacakgeJson, options))
   }
+
+  if (dts) {
+    result.push(pluginMoveDts(options))
+  }
+
+  return result
 }
